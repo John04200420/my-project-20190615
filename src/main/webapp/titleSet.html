@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>設定 -Whiloud</title>
+  <link rel="stylesheet" href="css/titleSet.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-switch.css" />
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-switch.min.css" />
+</head>
+
+<body>
+  <!-- 頂部選單 -->
+  <header id="header">
+    <div class="logo"><a href="main.html">Whiloud</a></div>
+    <div class="username">HAo</div>
+    <div class="rec"><a href="recList.html"><img src="images/mic.png">錄音</a></div>
+    <div class="videoimg"><a href="videoList.html"><img src="images/videoimg.png">看片</a></div>
+    <div class="cooperation"><a href="cooperationList.html"><img src="images/cooperation.png">雙修</a></div>
+    <a href="#menu" class="toggle"><span>Menu</span></a>
+  </header>
+  <!-- 漢堡Menu -->
+  <nav id="menu">
+    <ul class="links">
+      <li><img src="images/5.jpg" alt=""></li>
+      <li><a href="myVideo.html">我的影片</a></li>
+      <li><a href="recList.html">範本集</a></li>
+      <li><a href="videoList.html">影片集</a></li>
+      <li><a href="cooperationList.html">合作</a></li>
+      <li><a href="titleSet.html">設定</a></li>
+      <li><a href="index.html">登出</a></li>
+    </ul>
+  </nav>
+  <table class="row">
+    <tr>
+      <td id="personlist">個人資料</td>
+      <td id="personmage">頭像設定</td>
+      <td id="personpassword">密碼修改</td>
+      <td id="personprivacy">隱私設定</td>
+    </tr>
+  </table>
+  <!-- 個人資料修改 -->
+  <div id="infocontent01">
+    <form class="firstlist">
+      <p>名子 :</p><input type="text" name="name">
+      <p>性別 :</p>
+      <select class="input" name="gender" required>
+        <option value="" disabled="disabled" selected="selected"></option>
+        <option value="M">男性</option>
+        <option value="W">女性</option>
+        <option value="N">性別保密</option>
+      </select>
+      <p>生日 :</p><input class="input" type="text" onfocus="(this.type='date')" name="bitthday" />
+      <p>電話號碼 :</p><input type="text" name="phone">
+      <p>自我介紹 :</p> <input type="text" name="introduction">
+      <div class="interest">
+        <p>興趣 :</p>
+        <input type="checkbox" name="gender" value="read">閱讀
+        <input type="checkbox" name="gender" value="game">遊戲
+        <input type="checkbox" name="gender" value="movie">電影
+        <input type="checkbox" name="gender" value="shopp">逛街
+        <input type="checkbox" name="gender" value="ballgame">打球
+        <input type="checkbox" name="gender" value="music">音樂
+        <input type="checkbox" name="gender" value="travel">旅行
+        <input type="checkbox" name="gender" value="magic">魔術
+        <input type="checkbox" name="gender" value="fitness">健身
+        <input type="checkbox" name="gender" value="cook">烹飪
+      </div>
+      <div class="firstbutton">
+        <input type="submit" value="傳送出去">
+      </div>
+    </form>
+  </div>
+  <!-- 頭像設定 -->
+  <div id="infocontent02">
+    <div class="preview">
+      <p>原大頭貼 :</p><br>
+      <img src="images/picture.png" alt="">
+    </div>
+    <div class="preview">
+      <p>準大頭貼 :</p><br>
+      <img id="image" alt="">
+    </div>
+    <form class="secondlist">
+      <input type="file" id="theFile" name="file">
+      <div class="secondbutton">
+        <input type="submit" value="傳送出去" name="file">
+      </div>
+    </form>
+  </div>
+  <!-- 密碼修改 -->
+  <div id="infocontent03">
+    <form class="thirdlist">
+      <p>原密碼 :</p><input type="password" name="password">
+      <p>新密碼 :</p><input type="password" name="password">
+      <div class="thirdbutton">
+        <input type="submit" value="傳送出去">
+      </div>
+    </form>
+  </div>
+  <!-- 隱私設定 -->
+  <div id="infocontent04">
+    <form class="fourthlist">
+      <p>好友申請 :</p>
+      <div class="switch first" id="mySwitch">
+        <input type="checkbox" checked data-on-text="YES" data-off-text="NO" />
+      </div>
+      <p>陌生人的訊息 :
+        <div class="switch another" id="mySwitch">
+          <input type="checkbox" checked data-on-text="YES" data-off-text="NO" />
+        </div>
+        <p>影藏個人資訊 :
+          <div class="switch another" id="mySwitch">
+            <input type="checkbox" checked data-on-text="YES" data-off-text="NO" />
+          </div>
+          <div class="fourthbutton">
+            <input type="submit" value="傳送出去">
+          </div>
+    </form>
+  </div>
+
+</body>
+
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/titleSet.js"></script>
+<script src="js/skel.min.js"></script>
+<script src="js/util.js"></script>
+<script src="js/jquery.flexslider.js"></script>
+<script type="text/javascript" src="js/thickbox.js"></script>
+<script src="js/bootstrap-switch.js"></script>
+<script src="js/bootstrap-switch.min.js"></script>
+
+</html>

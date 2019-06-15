@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>錄音頁面</title>
+  <link href="css/rec.css" rel="stylesheet" type="text/css">
+  <link href="css/step.css" rel="stylesheet" type="text/css">
+  <script src="js/video.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/step.js"></script>
+  <style type="text/css">
+    .vjs-default-skin {
+      color: rgba(171, 208, 102, 1);
+    }
+
+    .vjs-default-skin .vjs-play-progress,
+    .vjs-default-skin .vjs-volume-level {
+      background-color: rgba(214, 232, 181, 0.7)
+    }
+
+    .vjs-default-skin .vjs-control-bar,
+    .vjs-default-skin .vjs-big-play-button {
+      background: rgba(40, 124, 134, 0.8)
+    }
+
+    .vjs-default-skin .vjs-slider {
+      background: rgba(0, 9, 219, 0.23)
+    }
+
+    .vjs-default-skin .vjs-control-bar {
+      font-size: 110%
+    }
+  </style>
+</head>
+
+<body>
+  <div class="leftFixed">
+
+    <a class="back" href="video.html">返回影片 / 關閉視窗</a>
+    <video id="MY_VIDEO_1" class="video-js vjs-default-skin" controls preload="auto" width="480" height="360" poster=""
+      data-setup="{}">
+      <source src="video/BBBBB.mp4" type='video/mp4'>
+    </video>
+
+    <div class="step-body" id="myStep">
+      <div class="step-header">
+        <ul>
+          <li>
+            <p>測試麥克風</p>
+          </li>
+          <li>
+            <p>錄音及創作</p>
+          </li>
+          <li>
+            <p>發佈設定</p>
+          </li>
+        </ul>
+      </div>
+      <div class="step-content">
+        <div class="step-list">
+          <button class="findmic" onclick="ShowNext()">連接麥克風</button>
+          <br>
+          <button class="nextBtn" id="goNext">下一步</button>
+        </div>
+        <div class="step-list">
+          作品名稱：<textarea class="inputMessage" type="text" placeholder="在此輸入作品名稱" cols="22" rows="1"></textarea>
+          <br>
+          想說的話：<textarea class="inputMessage" type="text" placeholder="在此輸入想說的話"cols="30" rows="5"></textarea>
+          <br>
+          <button class="nextBtn">下一步</button>
+        </div>
+
+        <div class="step-list">
+          尋找合作：
+          <select id="select1">
+            <option selected="true"></option>
+            <option>需要</option>
+            <option>不需要</option>
+          </select>
+          <br>
+          未配音角色選項：
+          <select id="select2">
+            <option selected="true"></option>
+            <option>只能給朋友配</option>
+            <option>任何人都能配</option>
+          </select>
+          <br>
+          <button class="postBtn" id="goPost">發佈</button>
+          <button class="preBtn">上一步</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="rightFloat">
+    <div class="text">
+      <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam sint esse fugiat et labore fuga ipsum totam
+        aperiam earum cupiditate ipsa quo voluptate quisquam voluptatibus, laboriosam distinctio.</h1>
+      <br>
+      <h2>中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯</h2>
+      <br>
+      <div class="allSoundBtm">
+        <button class="soundButton Original">聽原音</button>
+        <button class="soundButton listenRec">聽錄音</button>
+        <button class="soundButton recButton">錄音</button>
+        <br>
+      </div>
+    </div>
+    <div class="text">
+      <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam sint esse fugiat et labore fuga ipsum totam
+        aperiam earum cupiditate ipsa quo voluptate quisquam voluptatibus, laboriosam distinctio.</h1>
+      <br>
+      <h2>中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯</h2>
+      <br>
+      <div class="allSoundBtm">
+        <button class="soundButton Original">聽原音</button>
+        <button class="soundButton listenRec">聽錄音</button>
+        <button class="soundButton recButton">錄音</button>
+        <br>
+      </div>
+    </div>
+    <div class="text">
+      <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam sint esse fugiat et labore fuga ipsum totam
+        aperiam earum cupiditate ipsa quo voluptate quisquam voluptatibus, laboriosam distinctio.</h1>
+      <br>
+      <h2>中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯</h2>
+      <br>
+      <div class="allSoundBtm">
+        <button class="soundButton Original">聽原音</button>
+        <button class="soundButton listenRec">聽錄音</button>
+        <button class="soundButton recButton">錄音</button>
+        <br>
+      </div>
+    </div>
+    <div class="text">
+      <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam sint esse fugiat et labore fuga ipsum totam
+        aperiam earum cupiditate ipsa quo voluptate quisquam voluptatibus, laboriosam distinctio.</h1>
+      <br>
+      <h2>中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯</h2>
+      <br>
+      <div class="allSoundBtm">
+        <button class="soundButton Original">聽原音</button>
+        <button class="soundButton listenRec">聽錄音</button>
+        <button class="soundButton recButton">錄音</button>
+        <br>
+      </div>
+    </div>
+
+    <div class="text">
+      <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam sint esse fugiat et labore fuga ipsum totam
+        aperiam earum cupiditate ipsa quo voluptate quisquam voluptatibus, laboriosam distinctio.</h1>
+      <br>
+      <h2>中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯</h2>
+      <br>
+      <div class="allSoundBtm">
+        <button class="soundButton Original">聽原音</button>
+        <button class="soundButton listenRec">聽錄音</button>
+        <button class="soundButton recButton">錄音</button>
+        <br>
+      </div>
+    </div>
+
+    <div class="text">
+      <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam sint esse fugiat et labore fuga ipsum totam
+        aperiam earum cupiditate ipsa quo voluptate quisquam voluptatibus, laboriosam distinctio.</h1>
+      <br>
+      <h2>中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯</h2>
+      <br>
+      <div class="allSoundBtm">
+        <button class="soundButton Original">聽原音</button>
+        <button class="soundButton listenRec">聽錄音</button>
+        <button class="soundButton recButton">錄音</button>
+        <br>
+      </div>
+    </div>
+
+    <div class="text">
+      <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam sint esse fugiat et labore fuga ipsum totam
+        aperiam earum cupiditate ipsa quo voluptate quisquam voluptatibus, laboriosam distinctio.</h1>
+      <br>
+      <h2>中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯</h2>
+      <br>
+      <div class="allSoundBtm">
+        <button class="soundButton Original">聽原音</button>
+        <button class="soundButton listenRec">聽錄音</button>
+        <button class="soundButton recButton">錄音</button>
+        <br>
+      </div>
+    </div>
+    <div class="text">
+      <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam sint esse fugiat et labore fuga ipsum totam
+        aperiam earum cupiditate ipsa quo voluptate quisquam voluptatibus, laboriosam distinctio.</h1>
+      <br>
+      <h2>中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯</h2>
+      <br>
+      <div class="allSoundBtm">
+        <button class="soundButton Original">聽原音</button>
+        <button class="soundButton listenRec">聽錄音</button>
+        <button class="soundButton recButton">錄音</button>
+        <br>
+      </div>
+    </div>
+
+    <div class="text">
+      <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam sint esse fugiat et labore fuga ipsum totam
+        aperiam earum cupiditate ipsa quo voluptate quisquam voluptatibus, laboriosam distinctio.</h1>
+      <br>
+      <h2>中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯 中文翻譯</h2>
+      <br>
+      <div class="allSoundBtm">
+        <button class="soundButton Original">聽原音</button>
+        <button class="soundButton listenRec">聽錄音</button>
+        <button class="soundButton recButton">錄音</button>
+        <br>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
